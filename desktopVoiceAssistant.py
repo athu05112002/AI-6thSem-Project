@@ -10,7 +10,7 @@ r = sr.Recognizer()
 with sr.Microphone() as source:
     print("Say something!")
     # listen for audio and store it in audio_data variable
-    audio_data = r.record(source, duration=8)
+    audio_data = r.record(source, duration=5)
 
     # recognize speech using Google Speech Recognition
     text = r.recognize_google(audio_data)
@@ -19,7 +19,7 @@ with sr.Microphone() as source:
     print("You said:", text)
 
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 # Define the prompt you want to generate text from
 prompt = text
